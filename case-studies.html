@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Case Studies — Eerik Lehdonjoki</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cv.css">
+  <link rel="stylesheet" href="web.css">
+  <meta name="description" content="Eerik Lehdonjoki — Senior Data Engineer. Explore my CV, case studies, and data engineering work.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Eerik Lehdonjoki<small>Senior Data Engineer</small></a>
+    <button class="menu-button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav id="nav-links" class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a aria-current="page" href="case-studies.html">Case Studies</a>
+    </nav>
+  </div>
+</header>
+<div class="page-shell">
+<main class="case-studies-page">
+<section id="case-studies" class="hero">
+<h1>Case Studies</h1>
+<p><strong>Senior Data Engineer</strong></p>
+<p>Two example case studies about Azure data platforms and production data integrations.</p>
+<p><a href="Eerik_Lehdonjoki_Case_Studies.pdf" class="download-button">Download Case Studies</a></p>
+</section>
+<section id="how-to-read-these-case-studies" class="intro">
+<h2>How To Read These Case Studies</h2>
+<p>In these case studies, I go through how to approach common data platform challenges. The idea is to show how approach platform modernization and data integrations from design to running in production.</p>
+</section>
+<h2 id="case-studies-1">Case Studies</h2>
+<h3 id="modernizing-a-legacy-data-platform-into-an-azure-lakehouse"><a href="#case-azure-lakehouse-modernization">Modernizing a Legacy Data Platform into an Azure Lakehouse</a></h3>
+<p>Moving step by step from scattered source systems and old warehouse processes to an Azure lakehouse that is governed and monitored.</p>
+<h3 id="reliable-production-data-integrations"><a href="#case-reliable-data-integrations">Reliable Production Data Integrations</a></h3>
+<p>Ingestion and transformation patterns for production: retries, schema changes, data quality and recovering from failures.</p>
+<section id="case-azure-lakehouse-modernization" class="case">
+<h2>Modernizing a Legacy Data Platform into an Azure Lakehouse</h2>
+<h3 id="representative-scenario">Representative Scenario</h3>
+<p>Data is in several operational systems and in an old warehouse. Pipelines are hard to change and the same business logic is implemented in many places. Nobody really sees the data quality, the lineage or why production jobs fail.</p>
+<h3 id="approach">Approach</h3>
+<ol type="1">
+<li>List the important sources, data products, owners, access limits and freshness needs. Pick a small but useful part to migrate first.</li>
+<li>Design a medallion style lakehouse in Azure. Use Databricks and Azure Data Factory where they make sense for the workload.</li>
+<li>Build ingestion, transformations, data models and automated quality checks with Python, SQL and Spark.</li>
+<li>Add access control, monitoring, CI/CD and infrastructure automation, so releases and environments can be reproduced.</li>
+<li>Document who owns what, how to recover from failures and what the next migration steps are.</li>
+</ol>
+<h3 id="outcomes-to-measure">Outcomes to Measure</h3>
+<ul>
+<li>How much time and effort it takes to add a new source or deliver a data product.</li>
+<li>Pipeline reliability, data freshness and how fast failures are noticed and fixed.</li>
+<li>Number of data quality issues and whether data can be traced from source to consumer.</li>
+<li>Running cost and performance compared to a baseline agreed beforehand.</li>
+</ul>
+<h3 id="relevant-capabilities">Relevant Capabilities</h3>
+<p>Azure Databricks, Azure Data Factory, Apache Spark, Python, SQL, lakehouse architecture, data modeling, data quality, Terraform, CI/CD and production operations.</p>
+</section>
+<section id="case-reliable-data-integrations" class="case">
+<h2>Reliable Production Data Integrations</h2>
+<h3 id="representative-scenario-1">Representative Scenario</h3>
+<p>Business data comes from APIs, databases and files. The ingestion jobs break easily when a source is down, a schema changes or a run has to be repeated. It is also hard to find out what went wrong when there are failures or data quality problems.</p>
+<h3 id="approach-1">Approach</h3>
+<ol type="1">
+<li>Before implementation, agree on the source contracts, owners, how fresh the data needs to be and how fast recovery is needed.</li>
+<li>Build ingestion with checkpoints and idempotent processing. Then retries and backfills do not create duplicates or skip data without anyone noticing.</li>
+<li>Handle schema changes and validate data at the pipeline boundaries, so invalid or unexpected records are visible.</li>
+<li>Add structured logs, metrics, alerts and runbooks. The operator can then see the impact and recover safely.</li>
+<li>Automate tests and deployments. Choose batch or streaming based on the real latency requirement.</li>
+</ol>
+<h3 id="outcomes-to-measure-1">Outcomes to Measure</h3>
+<ul>
+<li>Share of successful runs, missing or duplicate records and data freshness compared to the agreed service level.</li>
+<li>Time to detect, find the cause and recover when a source or pipeline fails.</li>
+<li>Effort to add a new source or handle a schema change.</li>
+<li>Share of critical data flows that have automated validation, monitoring and a documented owner.</li>
+</ul>
+<h3 id="relevant-capabilities-1">Relevant Capabilities</h3>
+<p>Azure Data Factory, Azure Databricks, Python, SQL, Apache Spark, API and database integration, data quality, CI/CD, Terraform, monitoring and production operations.</p>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <span>© 2026 Eerik Lehdonjoki</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="case-studies.html">Case Studies</a>
+    </div>
+  </div>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
