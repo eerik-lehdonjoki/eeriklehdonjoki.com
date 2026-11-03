@@ -67,6 +67,7 @@ h3 { font-size: 1.22rem; margin: 0 0 10px; }
 .card p { color: var(--muted); margin-bottom: 0; }
 .card-link { text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
 .card-link:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.contact-page .card a { overflow-wrap: anywhere; }
 .kicker { color: var(--accent); font-weight: 800; font-size: .78rem; text-transform: uppercase; letter-spacing: .07em; }
 
 .tech-list { display: flex; flex-wrap: wrap; gap: 10px; }
