@@ -67,7 +67,6 @@ h3 { font-size: 1.22rem; margin: 0 0 10px; }
 .card p { color: var(--muted); margin-bottom: 0; }
 .card-link { text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
 .card-link:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-.contact-page .card a { overflow-wrap: anywhere; }
 .kicker { color: var(--accent); font-weight: 800; font-size: .78rem; text-transform: uppercase; letter-spacing: .07em; }
 
 .tech-list { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -146,6 +145,27 @@ h3 { font-size: 1.22rem; margin: 0 0 10px; }
 .home-page .cta .button.secondary { color: white; border-color: #41506a; }
 .home-page .cta .button.secondary:hover { background: #1c2940; }
 
+.contact-section { padding: 88px 0 96px; }
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: clamp(40px, 7vw, 90px); align-items: center; }
+.contact-intro h1 { max-width: 11ch; margin: 16px 0 24px; font-size: clamp(3rem, 5.5vw, 4.9rem); }
+.contact-intro .lead { max-width: 490px; margin: 0; }
+.contact-options { display: grid; gap: 16px; }
+.contact-card { min-width: 0; padding: 30px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); }
+.contact-card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.contact-icon { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border-radius: 12px; background: #edf4ff; color: var(--accent); }
+.contact-icon svg { width: 22px; height: 22px; }
+.contact-card-label { color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.contact-card h2 { margin: 0 0 8px; font-size: 1.55rem; }
+.contact-card p { margin: 0 0 22px; color: var(--muted); }
+.contact-link { display: inline-flex; align-items: baseline; gap: 10px; max-width: 100%; color: var(--accent-dark); font-weight: 750; text-decoration-thickness: 1px; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.contact-link span { flex: 0 0 auto; text-decoration: none; }
+.contact-link:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; border-radius: 2px; }
+.contact-card-email { border-color: var(--ink); background: var(--ink); }
+.contact-card-email .contact-icon { background: #263a5b; color: #bcd4ff; }
+.contact-card-email .contact-card-label, .contact-card-email p { color: #b7c4d8; }
+.contact-card-email h2, .contact-card-email .contact-link { color: #fff; }
+.contact-link:hover { text-decoration-thickness: 2px; }
+
 .site-footer { padding: 34px 0; border-top: 1px solid var(--line); color: var(--muted); background: #fff; }
 .footer-grid { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
 .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
@@ -156,6 +176,8 @@ h3 { font-size: 1.22rem; margin: 0 0 10px; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .home-page .hero-grid, .home-page .grid-3, .home-page .grid-2 { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+  .contact-intro h1 { max-width: 16ch; }
   .stats { grid-template-columns: 1fr; }
   .cv-meta, .toc { position: static; }
   .toc { border-left: 0; border-top: 1px solid var(--line); padding: 20px 0 0; }
@@ -177,6 +199,9 @@ h3 { font-size: 1.22rem; margin: 0 0 10px; }
   .home-page .section { padding: 44px 0; }
   .home-page .card { padding: 20px; }
   .home-page .cta { padding: 24px; }
+  .contact-section { padding: 50px 0 60px; }
+  .contact-intro h1 { font-size: clamp(2.6rem, 11vw, 3.7rem); }
+  .contact-card { padding: 24px; }
 }
 
 @media print {
