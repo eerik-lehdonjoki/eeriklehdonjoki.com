@@ -43,18 +43,18 @@
 <div id="case-azure-lakehouse-modernization" class="case">
 <h2 id="case-modernizing-a-legacy-data-platform-into-an-azure-lakehouse">Modernizing a Legacy Data Platform into an Azure Lakehouse</h2>
 <h3 id="representative-scenario">Representative Scenario</h3>
-<p>Data is in several operational systems and in an old warehouse. Its hard to modify pipelines and same business logic is implemented in multiple places. Nobody sees the data quality, lineage or why production jobs fail.</p>
+<p>Data is in several operational systems and in old warehouse. Its hard to modify pipelines and same logic is implemented in multiple places. Nobody sees data quality or why production jobs fail.</p>
 <h3 id="approach">Approach</h3>
 <ol type="1">
-<li>List the important sources, data products, owners, access limits and freshness needs. Pick a small but useful part to migrate first.</li>
-<li>Design a medallion style lakehouse in Azure. Use Databricks and Azure Data Factory where they make sense for the workload.</li>
-<li>Build ingestion, transformations, data models and automated quality checks with Python, SQL and Spark.</li>
-<li>Add access control, monitoring, CI/CD and infrastructure automation so releases and environments can be reproduced.</li>
-<li>Document who owns what, how to recover from failures and what the next migration steps are.</li>
+<li>List important sources, data products, owners, access limits and freshness needs. Pick small and useful part to migrate first.</li>
+<li>Use medallion style, Databricks and Azure Data Factory where they make sense.</li>
+<li>Build ingestion, transformations, data models and automated quality checks.</li>
+<li>Add access control, monitoring, CI/CD and infrastructure automation for releases.</li>
+<li>Document who owns what and how to recover from failures.</li>
 </ol>
 <h3 id="outcomes-to-measure">Outcomes to Measure</h3>
 <ul>
-<li>How much time and effort it takes to add a new data source.</li>
+<li>How much time it takes to add a new data source.</li>
 <li>Pipeline reliability, data freshness and how fast failures are noticed and fixed.</li>
 <li>Number of data quality issues.</li>
 <li>Running cost and performance.</li>
@@ -65,20 +65,21 @@
 <div id="case-reliable-data-integrations" class="case">
 <h2 id="case-production-data-integrations">Production Data Integrations</h2>
 <h3 id="representative-scenario-1">Representative Scenario</h3>
-<p>Business data comes from APIs, databases and files. The ingestion jobs break easily when a source is down, a schema changes or a run has to be repeated. It is also hard to find out what went wrong when there are failures or data quality problems.</p>
+<p>Data comes from APIs, databases and files. The ingestion jobs break when source is down, schema changes or run has to be repeated. It is hard to find out what went wrong when there are issues.</p>
 <h3 id="approach-1">Approach</h3>
 <ol type="1">
-<li>Before implementation, agree on the source contracts, owners, how fresh the data needs to be and how fast recovery is needed.</li>
-<li>Build ingestion with checkpoints and idempotent processing. Then retries and backfills do not create duplicates or skip data without anyone noticing.</li>
-<li>Handle schema changes and validate data at the pipeline boundaries so invalid or unexpected records are visible.</li>
-<li>Add structured logs, metrics and alerts. The operator can then see the impact and recover safely.</li>
-<li>Automate tests and deployments. Choose full, batch or streaming based on the requirement.</li>
+<li>Before implementation, agree on the source contracts and owners how fresh the data needs to be.</li>
+<li>Build ingestion with checkpoints and idempotent processing so retries do not create duplicates or skip data.</li>
+<li>Handle schema changes and validate data so invalid or unexpected records are visible.</li>
+<li>Add structured logs, metrics and alerts.</li>
+<li>Automate tests and deployments.</li>
 </ol>
 <h3 id="outcomes-to-measure-1">Outcomes to Measure</h3>
 <ul>
-<li>Share of successful runs, missing or duplicate records and data freshness.</li>
-<li>Time to detect, find the cause and recover when a source or pipeline fails.</li>
-<li>Effort to add a new source or handle a schema change.</li>
+<li>Successful runs, missing or duplicate records.</li>
+<li>Time to detect, find cause and recover when pipeline fails.</li>
+<li>Time to add a new source.</li>
+<li>Time to handle a schema change</li>
 </ul>
 <h3 id="relevant-capabilities-1">Relevant Capabilities</h3>
 <p>Azure Data Factory, Azure Databricks, Python, SQL, Apache Spark, API and database integration, data quality, CI/CD, Terraform, monitoring and production operations.</p>
