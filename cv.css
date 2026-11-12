@@ -20,6 +20,17 @@ body {
     color: #ffffff;
     padding: 15mm 13mm 12mm 13mm;
     margin: -13mm -15mm 10mm -15mm;
+    overflow: hidden;
+}
+
+.hero-photo {
+    float: right;
+    width: 34mm;
+    height: 34mm;
+    margin: -2mm 2mm 0 6mm;
+    border-radius: 50%;
+    border: 2px solid #60a5fa;
+    object-fit: cover;
 }
 
 .hero h1 {
