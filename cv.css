@@ -7,7 +7,7 @@ html {
     font-family: "Segoe UI", "DejaVu Sans", Arial, sans-serif;
     font-size: 9.2pt;
     line-height: 1.42;
-    color: #27342c;
+    color: #344953;
 }
 
 body {
@@ -16,8 +16,8 @@ body {
 }
 
 .hero {
-    background-color: #1f2b24;
-    color: #ffffff;
+    background-color: #192c38;
+    color: #f7f8f5;
     padding: 15mm 13mm 12mm 13mm;
     margin: -13mm -15mm 10mm -15mm;
     overflow: hidden;
@@ -38,12 +38,12 @@ body {
     font-size: 28pt;
     line-height: 1;
     font-weight: 700;
-    color: #ffffff;
+    color: #f7f8f5;
 }
 
 .hero p {
     margin: 3px 0 0 0;
-    color: #e3ebdf;
+    color: #e8ede6;
 }
 
 .hero p:first-of-type {
@@ -52,11 +52,11 @@ body {
 }
 
 .hero p:first-of-type strong {
-    color: #a9bba0;
+    color: #899d80;
 }
 
 .hero a {
-    color: #ffffff;
+    color: #f7f8f5;
     text-decoration: none;
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 .intro {
-    background-color: #f6f8f4;
+    background-color: #e8ede6;
     border-left-width: 4px;
     border-left-style: solid;
     border-left-color: #899d80;
@@ -84,7 +84,7 @@ h2 {
     font-weight: 700;
     letter-spacing: 0.9px;
     text-transform: uppercase;
-    color: #5f7457;
+    color: #49655a;
     page-break-after: avoid;
 }
 
@@ -103,7 +103,7 @@ h3 {
     font-size: 11.6pt;
     line-height: 1.2;
     font-weight: 700;
-    color: #1f2b24;
+    color: #192c38;
     page-break-after: avoid;
 }
 
@@ -125,18 +125,18 @@ li {
 }
 
 strong {
-    color: #1f2b24;
+    color: #192c38;
     font-weight: 700;
 }
 
 em {
-    color: #667569;
+    color: #55676f;
     font-style: normal;
     font-size: 8.8pt;
 }
 
 a {
-    color: #5f7457;
+    color: #49655a;
     text-decoration: none;
 }
 
@@ -151,7 +151,7 @@ a {
     margin: 4px 1.5%;
     padding: 9px 10px;
     box-sizing: border-box;
-    background-color: #f6f8f4;
+    background-color: #e8ede6;
     border-top-width: 3px;
     border-top-style: solid;
     border-top-color: #899d80;
@@ -176,12 +176,12 @@ a {
 .tech-stack {
     margin: 7px 0 10px 0;
     padding: 7px 9px;
-    background-color: #f6f8f4;
+    background-color: #e8ede6;
     border-left-width: 3px;
     border-left-style: solid;
-    border-left-color: #c9d5c2;
+    border-left-color: #899d80;
     font-size: 8.7pt;
-    color: #4d5a50;
+    color: #344953;
 }
 
 .tech-stack p {
@@ -212,7 +212,7 @@ a {
 .case {
     margin: 22px 0;
     padding: 16px 0;
-    border-top: 1px solid #dde5d8;
+    border-top: 1px solid #d9e0d6;
 }
 
 .case h2:first-child {
